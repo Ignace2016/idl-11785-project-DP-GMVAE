@@ -9,5 +9,5 @@
 5. [The infinite gaussian mixture model](https://groups.seas.harvard.edu/courses/cs281/papers/rasmussen-1999a.pdf)
 
 
-# Acknowledgement
+## Acknowledgement
 Our project is based on [GMVAE](https://github.com/jariasf/GMVAE/tree/master/pytorch). Thanks for the authors who release the code. We refine the model by adding DPGMM in the training process and witness better performance on accuracy of unsupervised clustering.
