@@ -1,4 +1,4 @@
-# idl-11785-project
+# DP-GMVAE
 
 
 ## Reference
