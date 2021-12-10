@@ -12,6 +12,7 @@ from networks.Networks import *
 from losses.LossFunctions import *
 from metrics.Metrics import *
 import matplotlib.pyplot as plt
+from sklearn.manifold import TSNE
 
 class GMVAE:
 
