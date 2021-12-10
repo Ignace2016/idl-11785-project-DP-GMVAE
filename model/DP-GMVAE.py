@@ -1,11 +1,11 @@
 """
 ---------------------------------------------------------------------
--- Author: Jhosimar George Arias Figueroa
+-- Author: Team 60
 ---------------------------------------------------------------------
 
-Gaussian Mixture Variational Autoencoder for Unsupervised Clustering
-
+GMVAE with DPGMM Priors for Unsupervised Clustering
 """
+
 import torch
 import numpy as np
 from torch import nn, optim
@@ -290,7 +290,7 @@ class GMVAE:
           print("best acc is %.5lf" % best_acc)
           print("model saved")
       
-      if (epoch > 3): # epoch > 30 and epoch % 3 == 2
+      if epoch > 30 and epoch % 3 == 2
     #   # use dpgmm prior to relace model prior
         print("Calculating similarity by DPGMM")
         test_features, test_labels = self.latent_features(train_loader, "mean", True)
