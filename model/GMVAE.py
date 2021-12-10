@@ -1,6 +1,9 @@
 """
 ---------------------------------------------------------------------
 -- Author: Jhosimar George Arias Figueroa & Team 60
+
+-- Modified by: Haonan Di, Yuelin Liu, Yu Liu on Dec. 2021
+Baseline model on GMVAE
 ---------------------------------------------------------------------
 Gaussian Mixture Variational Autoencoder for Unsupervised Clustering
 """

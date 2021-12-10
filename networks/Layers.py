@@ -1,9 +1,12 @@
 """
 ---------------------------------------------------------------------
--- Author: Jhosimar George Arias Figueroa
+-- Original Author: Jhosimar George Arias Figueroa
+
+-- Modified by: Haonan Di, Yuelin Liu, Yu Liu on Dec. 2021
+From GMVAE to DP-GMVAE, we modify the latent space and introduce DP-GMM for latent space to do various tests
 ---------------------------------------------------------------------
 
-Custom Layers
+Layers shown in the report.
 
 """
 import torch

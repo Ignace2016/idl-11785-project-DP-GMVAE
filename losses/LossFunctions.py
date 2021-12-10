@@ -2,10 +2,11 @@
 """
 ---------------------------------------------------------------------
 -- Author: Jhosimar George Arias Figueroa
+-- Modified by: Haonan Di, Yuelin Liu, Yu Liu on Dec. 2021
 ---------------------------------------------------------------------
 
 Loss functions used for training our model
-
+Three loss in total: reconstruction loss, gaussian loss and entropy loss
 """
 import math
 import torch

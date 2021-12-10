@@ -1,8 +1,9 @@
 """
 ---------------------------------------------------------------------
--- Author: Team 60
+-- Author: Team 60: Haonan Di, Yuelin Liu, Yu Liu
 ---------------------------------------------------------------------
 
+Dirichlet Process - Gaussian Mixture Variational Autoencoder Networks
 GMVAE with DPGMM Priors for Unsupervised Clustering
 """
 
