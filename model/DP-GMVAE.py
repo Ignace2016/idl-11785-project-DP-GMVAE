@@ -21,7 +21,7 @@ from sklearn.metrics.pairwise import cosine_distances, euclidean_distances, cosi
 import torch.optim as optim
 
 
-class GMVAE:
+class DPGMVAE:
 
   def __init__(self, args):
     self.num_epochs = args.epochs
