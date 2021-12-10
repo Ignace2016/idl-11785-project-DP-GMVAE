@@ -16,6 +16,7 @@ from metrics.Metrics import *
 import matplotlib.pyplot as plt
 from tqdm import tqdm
 from sklearn.mixture import BayesianGaussianMixture
+from sklearn.manifold import TSNE
 from sklearn.metrics.pairwise import cosine_distances, euclidean_distances, cosine_similarity
 
 import torch.optim as optim
@@ -27,6 +28,7 @@ class DPGMVAE:
     self.num_epochs = args.epochs
     self.cuda = args.cuda
     self.verbose = args.verbose
+    self.visualize = args.visualize
 
     self.batch_size = args.batch_size
     self.batch_size_val = args.batch_size_val
@@ -271,6 +273,19 @@ class DPGMVAE:
       else:
         print('(Epoch %d / %d) Train_Loss: %.3lf; Val_Loss: %.3lf   Train_ACC: %.3lf; Val_ACC: %.3lf   Train_NMI: %.3lf; Val_NMI: %.3lf' % \
               (epoch, self.num_epochs, train_loss, val_loss, train_acc, val_acc, train_nmi, val_nmi))
+      
+      # visualize latent space
+      if self.visualize == 1 and epoch in (1,3,5,10,20,50):
+        test_features, test_labels = self.latent_features(train_loader, "mean", True)
+        tsne_features = TSNE(n_components=2).fit_transform(test_features[:10000])
+        fig = plt.figure(figsize=(10, 6))
+
+        plt.scatter(tsne_features[:, 0], tsne_features[:, 1], c=test_labels[:10000], marker='o',
+                    edgecolor='none', cmap=plt.cm.get_cmap('jet', 10), s = 10)
+        plt.grid(False)
+        plt.axis('off')
+        plt.colorbar()
+        plt.show()  
 
       # decay gumbel temperature
       if self.decay_temp == 1:
