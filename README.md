@@ -1,5 +1,5 @@
 # DP-GMVAE
-
+Unsupervised Learning method derived from GMVAE model, you can visit https://drive.google.com/file/d/1HasY-55poPfcjfy0U45oDxmLAn-KJTDk/view for our preliminary report on this method. 
 
 ## Reference
 1. [Deep unsupervised clustering with Gaussian mixture variational autoencoders](https://arxiv.org/abs/1611.02648)
